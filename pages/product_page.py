@@ -38,7 +38,7 @@ class ProductPage(BasePage):
             *ProductPageLocators.ITEM_ADDED_MESSAGE
         ).text
         assert (
-            product_name in message_text
+            product_name == message_text
         ), "Success mesasge text doesn't contain product name"
 
     def should_be_cart_price_equal_to_product_price(self):
